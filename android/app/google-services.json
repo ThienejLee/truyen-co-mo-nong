@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "850790388128",
+    "firebase_url": "https://truyenco-b40dd.firebaseio.com",
+    "project_id": "truyenco-b40dd",
+    "storage_bucket": "truyenco-b40dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850790388128:android:8d6dd53dcad4372b3994c5",
+        "android_client_info": {
+          "package_name": "com.example.truyenco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850790388128-f1ndcgicdemh8m7hds9cjljcvujl43nf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.truyenco",
+            "certificate_hash": "eb7dfb3d85bdfb3d327a693191aa7fcd56088c7c"
+          }
+        },
+        {
+          "client_id": "850790388128-g0o7p25p38iki8lj4kk0is1kg18bnddq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMM5DPnH-VaEC99Fl2lvX1DsJTXTNr4Dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850790388128-g0o7p25p38iki8lj4kk0is1kg18bnddq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
