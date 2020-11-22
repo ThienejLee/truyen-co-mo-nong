@@ -13,8 +13,6 @@ class BookView extends StatefulWidget {
 Firestore database = Firestore.instance;
 
 class _BookViewState extends State<BookView> {
-  // String url = "http://www.pdf995.com/samples/pdf.pdf";
-  String pdfasset = "assets/sample.pdf";
   PDFDocument _doc;
   bool _loading;
   String _nameAppBar = "";
@@ -39,25 +37,6 @@ class _BookViewState extends State<BookView> {
       _loading = false;
     });
   }
-  /*
-  * FutureBuilder<DocumentSnapshot>(
-      future: users.doc(documentId).get(),
-      builder:
-          (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
-
-        if (snapshot.hasError) {
-          return Text("Something went wrong");
-        }
-
-        if (snapshot.connectionState == ConnectionState.done) {
-          Map<String, dynamic> data = snapshot.data.data();
-          return Text("Full Name: ${data['full_name']} ${data['last_name']}");
-        }
-
-        return Text("loading");
-      },
-    );
-  * */
 
   @override
   Widget build(BuildContext context) {
