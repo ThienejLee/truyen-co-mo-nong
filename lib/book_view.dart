@@ -30,6 +30,7 @@ class _BookViewState extends State<BookView> {
     DocumentSnapshot dn = await database.collection("MyBook").document(widget.bookId).get();
 
     final doc = await PDFDocument.fromAsset("assets/${dn.data["crawl"]}.pdf");
+    print("assets/data/${dn.data["crawl"]}.pdf");
     final nameAppBar = dn.data["title"];
     setState(() {
       _nameAppBar = nameAppBar;

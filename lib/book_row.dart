@@ -51,7 +51,7 @@ class BookRow extends StatelessWidget {
                                         )),
                                     new Padding(
                                       padding: const EdgeInsets.only(
-                                          left: 20.0, bottom: 10.0, top: 10.0),
+                                          left: 5.0, bottom: 10.0, top: 10.0),
                                       child: new Text(document["title"],
                                           style:
                                               const TextStyle(fontSize: 25.0),
@@ -74,7 +74,7 @@ class BookRow extends StatelessWidget {
                                           minWidth: 70.0,
                                           onPressed: () {
                                             print(document.documentID);
-
+                                            print(document.data["crawl"]);
                                             new Future.delayed(new Duration(
                                                     milliseconds: 250))
                                                 .then((_) =>
