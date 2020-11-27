@@ -65,7 +65,6 @@ flutter:
     - assets/images/book3.gif
     - assets/images/book4.gif
     - assets/images/
-    - assets/data/
     - assets/
 
   fonts:
