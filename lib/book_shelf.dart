@@ -1,7 +1,33 @@
+import 'package:truyenco/book_introduce.dart';
 import 'package:truyenco/book_row.dart';
 import 'package:flutter/material.dart';
+import 'package:truyenco/book_view.dart';
 
-class BookShelf extends StatelessWidget {
+class BookShelf extends StatefulWidget {
+  @override
+  _BookShelfState createState() => _BookShelfState();
+}
+
+class _BookShelfState extends State<BookShelf> with TickerProviderStateMixin {
+  final List<Tab> myTabs = <Tab>[
+    Tab(text: "Truyện",),
+    Tab(text: "Giới thiệu"),
+  ];
+
+  TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: myTabs.length, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -29,24 +55,27 @@ class BookShelf extends StatelessWidget {
               height: 450.0,
               width: double.infinity,
               decoration: new BoxDecoration(
-                borderRadius: new BorderRadius.only(topLeft: const Radius.circular(30.0), topRight: const Radius.circular(30.0)),
+                borderRadius: new BorderRadius.only(
+                    topLeft: const Radius.circular(30.0),
+                    topRight: const Radius.circular(30.0)),
                 color: Colors.white,
               ),
-              child: new DefaultTabController(
-                length: 2,
-                child: new Column(
-                  children: <Widget>[
-                    new TabBar(
-                      indicatorWeight: 2.0,
-                      isScrollable: true,
-                      labelColor: Colors.black87,
-                      tabs: <Widget>[
-                        new Tab(text: 'Truyện'),
-                        new Tab(text: 'Giới thiệu'),
-                      ],
-                    ),
-                    new BookRow(),
-                  ],
+              child:
+              new Scaffold(
+                appBar: AppBar(
+                  backgroundColor: Colors.white,
+                  toolbarHeight: 48,
+                  bottom: TabBar(
+                    labelColor: Colors.black87,
+                    controller: _tabController,
+                    tabs: myTabs,
+                  ),
+                ),
+                body: new TabBarView(
+                  controller: _tabController,
+                  children: myTabs.map((Tab tab) {
+                    return tab.text == "Truyện" ? BookRow(): BookIntroduce();
+                  }).toList(),
                 ),
               ),
             ),

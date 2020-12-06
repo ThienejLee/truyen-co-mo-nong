@@ -46,8 +46,7 @@ class BookRow extends StatelessWidget {
                                           borderRadius: BorderRadius.only(
                                               topRight: Radius.circular(10.0),
                                               topLeft: Radius.circular(10.0)),
-                                          child: new Image.network(document["url"],
-                                              fit: BoxFit.cover),
+                                          child: document["url"]!= null ? new Image.network(document["url"], fit: BoxFit.cover) : Image.network("https://f18-zpc.zdn.vn/345785531519115255/160f3559502ea170f83f.jpg", fit: BoxFit.cover)
                                         )),
                                     new Padding(
                                       padding: const EdgeInsets.only(
