@@ -26,6 +26,9 @@ class _BookReaderHomePageState extends State<BookReaderHomePage> with SingleTick
   Animation<double> animation;
   AnimationController controller;
 
+  String mNong = "M'nông";
+
+
   initState() {
     super.initState();
     controller = new AnimationController(duration: const Duration(milliseconds: 250), vsync: this);
@@ -62,7 +65,7 @@ class _BookReaderHomePageState extends State<BookReaderHomePage> with SingleTick
                         tag: 'hero-text',
                         child: new Container(
                           margin: const EdgeInsets.only(bottom: 20.0),
-                          child: new Text('Truyện cổ mơ nông',
+                          child: new Text('Truyện cổ $mNong',
                               style: const TextStyle(
                                   fontSize: 20.0,
                                   color: Colors.white,
